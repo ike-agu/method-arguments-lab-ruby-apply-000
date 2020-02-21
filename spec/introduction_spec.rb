@@ -1,13 +1,13 @@
-require "spec_helper"
+def introduction(name )
+   "Hi, my name is #{name}."
+  end 
+  introduction "Josh"
+  
+def introduction_with_language (name , language)
+      "Hi, my name is #{name} and I am learning to pragram in #{language}."
+   end 
 
-describe "#introduction" do 
-  it "takes in an argument of a name and puts out a phrase with that name using string interpolation" do 
-    expect{introduction("Josh")}.to output("Hi, my name is Josh.\n").to_stdout
-  end
-end
+    puts  introduction "Josh"
+    puts  introduction_with_language "Josh" , "Ruby"
 
-describe "#introduction_with_language" do 
-  it "takes in two arguments, a name and a language, and puts out a phrase using those arguments." do 
-    expect{introduction_with_language("Dan", "Ember.js")}.to output("Hi, my name is Dan and I am learning to program in Ember.js.\n").to_stdout
-  end
-end
+
